@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/api/products">Ver productos</a></li>
+          <li><a href="/api/dashboard">Dashboard</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+          <li><a href="/dashboard/new">añadir producto</a></li>
+        </ul>
+      </nav>
+    <h1>Login</h1>
+    <form id="loginForm" action="/login">
+        <input type="email" id="email" name="email" placeholder="introduce tu email" required>
+        <input type="password" id="password" name="password" placeholder="introduce tu password" required>
+        <button type="submit" id="loginButton">Entrar</button>
+        <div id="mensaje"></div>
+    </form>
+    <script type="module" src="../config/firebase.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "backend-project-break",
+  "version": "1.0.0",
+  "description": "Vamos a montar una tienda de ropa con un catálogo de productos y un dashboard para el administrador. Los productos se guardarán en una base de datos de mongo en Atlas. Podemos usar como referencia el pdf [web_ejemplo.pdf](web_ejemplo.pdf) que contiene un ejemplo de cómo podría ser la interfaz de la tienda y el dashboard.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "firebase": "^11.3.1",
+    "firebase-admin": "^13.1.0",
+    "mongodb": "^6.13.0",
+    "mongoose": "^8.10.1",
+    "morgan": "^1.10.0"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

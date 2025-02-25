@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/api/products">Ver productos</a></li>
+          <li><a href="/api/dashboard">Dashboard</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+          <li><a href="/dashboard/new">añadir producto</a></li>
+        </ul>
+      </nav>
+    <h1>Register</h1>
+    <form action="/register" method="post">
+        <input type="email" name="email" placeholder="introduce tu email" required>
+        <input type="password" name="password" placeholder="introduce tu password" required>
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>
