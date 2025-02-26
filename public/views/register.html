@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/png" href="../images/images.png">
 </head>
 <body>
-    <nav>
-        <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/api/products">Ver productos</a></li>
-          <li><a href="/api/dashboard">Dashboard</a></li>
-          <li><a href="/login">Login</a></li>
-          <li><a href="/register">Register</a></li>
-          <li><a href="/dashboard/new">añadir producto</a></li>
-        </ul>
-      </nav>
-    <h1>Register</h1>
-    <form action="/register" method="post">
-        <input type="email" name="email" placeholder="introduce tu email" required>
-        <input type="password" name="password" placeholder="introduce tu password" required>
+  <nav>
+    <ul>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+    </ul>
+  </nav>
+  <main class="main-login">
+    <div class="div-login-image">
+      <img src="https://i.pinimg.com/736x/d7/7b/24/d77b2484baa96a35f604202333ae9e6c.jpg" alt="chica imagen" height="100%" width="100%"> 
+    </div>
+    <div class="div-login">
+      <h1>Si no tienes una cuenta con nosotros, <br>Registrate</h1>
+      <form action="/register" method="post">
+        <input type="email" id="email" name="email" placeholder="introduce tu email" required><br>
+        <input type="password" id="password" name="password" placeholder="introduce tu password" required><br><br>
         <button type="submit">Registrar</button>
-    </form>
+      </form>
+    </div>
+  </main>
+  <footer class="footer-login">
+    Politicas<br>
+    &copy; Todos los derechos reservados
+  </footer>
 </body>
 </html>

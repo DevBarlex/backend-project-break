@@ -21,9 +21,20 @@ const productSchema = new mongoose.Schema({
     required: true 
   },
   size: { 
-    type: String, 
-    enum: ['XS', 'S', 'M', 'L', 'XL'], 
-    required: true 
+    type: [String], // Ahora es un array para permitir múltiples tallas
+    required: true,
+    validate: {
+      validator: function(sizes) {
+        const validSizes = {
+          'Zapatos': ['38', '39', '40', '41', '42', '43', '44'],
+          'Camisetas': ['XS', 'S', 'M', 'L', 'XL'],
+          'Pantalones': ['XS', 'S', 'M', 'L', 'XL'],
+          'Accesorios': ['Único']
+        };
+        return sizes.every(size => validSizes[this.category]?.includes(size));
+      },
+      message: props => `Al menos una talla no es válida para la categoría ${props.instance.category}`
+    }
   },
   price: { 
     type: Number, 

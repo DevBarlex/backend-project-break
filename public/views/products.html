@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="hb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
     <link rel="stylesheet" href="../styles.css">
-
+    <link rel="icon" type="image/png" href="../images/images.png">
 </head>
-<body >
-  <header>
-    <nav>
-      <ul>
-        <li><a href="/"><b>Inicio</b></a></li>
-        <li><a href="/api/products">Ver productos</a></li>
-        <li><a href="/api/dashboard">Dashboard</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Register</a></li>
-        <li><a href="/dashboard/new">añadir producto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
+<body class="hb">
+  <nav>
+    <ul>
+      <li><a href="/"><b>Inicio</b></a></li>
+      <li><a href="/products/categoria/Camisetas">Camisetas</a></li>
+      <li><a href="/products/categoria/Pantalones">Pantalones</a></li>
+      <li><a href="/products/categoria/Zapatos">Zapatos</a></li>
+      <li><a href="/products/categoria/Accesorios">Accesorios</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+      <form action="/logout" method="post">
+        <button id="submit" name="Logout">Cerrar Sesión</button>
+      </form>
+    </ul>
+  </nav>
+  <main id="main-productos">
     <h1>Lista de Productos</h1>
     <div id="product-container">
-      <!--PRODUCTS_PLACEHOLDER-->
+      {{PRODUCTS}}  
     </div>
   </main>
-
-  <form action="/logout" method="post">
-    <button id="submit" name="Logout">Logout</button>
-  </form>
+  <footer>
+    Politicas<br>
+    &copy; Todos los derechos reservados <br>
+    <a href="/api/dashboard" class="btn-dash">Dashboard</a>
+  </footer>
 </body>
 </html>

@@ -1,102 +1,43 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="hb">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda de Ropa</title>
-  <link rel="stylesheet" href="/styles.css">
-  <style>
-    body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        header {
-            background: #007bff;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav {
-          background: #444444; /* Color de fondo similar al header */
-          padding: 15px 0;
-          text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center; /* Centra los elementos */
-            gap: 20px; /* Espaciado entre los enlaces */
-        }
-
-        nav ul li {
-            display: inline-block;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 10px 15px;
-            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-            border-radius: 5px;
-        }
-
-        nav ul li a:hover {
-            background: #2b2b2b; /* Cambio de color al pasar el mouse */
-            color: #f1f1f1;
-        }
-
-        .hero {
-            padding: 50px 20px;
-            background: #fff;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .btn:hover {
-            background: #0056b3;
-        }
-        footer {
-            background: #333;
-            color: white;
-            padding: 15px;
-            margin-top: 50px;
-        }
-</style>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../images/images.png">
 </head>
-<body>
+<body class="hb">
   <nav>
     <ul>
       <li><a href="/">Inicio</a></li>
-      <li><a href="/api/products">Ver productos</a></li>
-      <li><a href="#">camisetas</a></li>
+      <li><a href="/api/products"> Productos</a></li>
       <li><a href="/login">Login</a></li>
       <li><a href="/register">Register</a></li>
+      <form action="/logout" method="post">
+        <button id="submit" name="Logout">Cerrar Sesión</button>
+      </form>
     </ul>
   </nav>
-  
-  <header>
-    <h1>Bienvenido a la Tienda</h1>
-    <p>Encuentra la mejor ropa al mejor precio.</p>
-    <a href="/api/products" class="btn">Ver Productos</a>
+  <header class="header-index">
+      <video autoplay loop muted playsinline id="background-video">
+        <source src="../images/110790-688648716_small.mp4" type="video/mp4">
+      </video>
   </header>
+  <main class="main-index">
+    <div class="foto-index">
+      <h1>Bienvenido a la Tienda</h1>    
+      <a href="/api/products" class="btn">Ver Productos</a>
+    </div>
+    <div class="divtwoimages">
+      
+    </div>
+  </main>
+  <footer>
+    Politicas<br>
+    &copy; Todos los derechos reservados<br>
+    Aviso legal
+  </footer>
+
 </body>
 </html>

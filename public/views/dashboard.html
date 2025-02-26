@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/png" href="../images/images.png">
 </head>
 <body>
     <nav>
         <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/api/products">Ver productos</a></li>
-          <li><a href="/api/dashboard">Dashboard</a></li>
-          <li><a href="/login">Login</a></li>
-          <li><a href="/register">Register</a></li>
-          <li><a href="/dashboard/new">añadir producto</a></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/dashboard/new">Añadir producto</a></li>
+            <form action="/logout" method="post">
+                <button id="submit" name="Logout">Cerrar Sesión</button>
+            </form>
         </ul>
     </nav>
-    <h1>Dashboard - Administrador de Productos</h1>
-    <a href="/dashboard/new">Añadir Nuevo Producto</a>
-    <div class="product-container">
-        {{PRODUCTS}}  <!-- Aquí se insertarán los productos dinámicamente -->
-    </div>
-    <form action="/logout" method="post">
-        <button id="submit" name="Logout">Logout</button>
-    </form>
+    <main class="main-products">
+        <h1>Dashboard - Administrador de Productos</h1>
+        <div class="product-container">
+            {{DASHBOARD}} 
+        </div>
+    </main>
+    <footer>
+        Politicas<br>
+        &copy; Todos los derechos reservados
+    </footer>
 </body>
 </html>
 

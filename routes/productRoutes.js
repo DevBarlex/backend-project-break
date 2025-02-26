@@ -7,6 +7,7 @@ const router = express.Router();
 const {
   showProducts,
   showProductById,
+  showCategory,
   showDashboard,
   showNewProduct,
   createProduct,
@@ -21,6 +22,7 @@ const checkAuth = require('../middlewares/authMiddleware')
 // Rutas públicas
 
 router.get('/api/products', showProducts);
+router.get('/products/categoria/:categoria', showCategory)// Obtener productos por categoria
 router.get('/products/:productId', showProductById);
 
 
@@ -30,22 +32,22 @@ router.get('/products/:productId', showProductById);
 router.get('/api/dashboard', checkAuth, showDashboard);
 
 // Mostrar el formulario para crear un nuevo producto
-router.get('/dashboard/new', showNewProduct);
+router.get('/dashboard/new', checkAuth, showNewProduct);
 
 // Crear un nuevo producto (cuando se envía el formulario)
 router.post('/api/dashboard', checkAuth, createProduct);
 
 // Detalle de un producto en el dashboard
-router.post('/dashboard/:productId', showProductInDashboard);
+router.get('/dashboard/:productId', checkAuth, showProductInDashboard);
 
 // Mostrar el formulario para editar un producto
-router.get('/dashboard/:productId/edit', showEditProduct);
+router.get('/dashboard/:productId/edit', checkAuth, showEditProduct);
 
 // Actualizar un producto (cuando se envía el formulario)
-router.post('/dashboard/:productId', updateProduct);
+router.post('/dashboard/:productId', checkAuth, updateProduct);
 
 // Eliminar un producto
-router.post('/dashboard/:productId/delete', deleteProduct);
+router.post('/dashboard/:productId/delete', checkAuth, deleteProduct);
 
 module.exports = router;
 
